@@ -44,10 +44,7 @@ It also sent 200 requests to the same endpoint with a 0.1 s pause between them. 
 
 ## Pagination
 
-The notebook implements two ways to walk through the pages:
-
-- **Offset-based.** Compute the next page yourself from `offset` and `limit`, and stop once you reach `total`. It gives full control over which pages you fetch.
-- **URL-based.** Follow the `next` URL the API returns until it is `null`. It is simpler, and it is what the pipeline in `src/` uses.
+The notebook implements two ways to walk through the pages. With offset-based pagination, you compute the next page yourself from `offset` and `limit` and stop once you reach `total`, which gives full control over which pages you fetch. URL-based pagination follows the `next` URL the API returns until it is `null`. It is simpler, and it is what the pipeline in `src/` uses.
 
 ## Rate limits
 
